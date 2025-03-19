@@ -1,0 +1,88 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Layout container */
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        "left main right"
+        "footer footer footer";
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Style dasar untuk setiap elemen */
+.header, .nav, .sidebar-left, .main-content, .sidebar-right, .footer {
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Warna dan style untuk masing-masing bagian */
+.header {
+    grid-area: header;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav {
+    grid-area: nav;
+    background: linear-gradient(135deg, #42a5f5, #1e88e5);
+    color: white;
+    font-size: 1.2em;
+}
+
+.sidebar-left, .sidebar-right {
+    background: linear-gradient(135deg, #66bb6a, #388e3c);
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.sidebar-left {
+    grid-area: left;
+}
+
+.sidebar-right {
+    grid-area: right;
+}
+
+.main-content {
+    grid-area: main;
+    background: linear-gradient(135deg, #ffca28, #ffa726);
+    color: white;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.footer {
+    grid-area: footer;
+    background: linear-gradient(135deg, #8e24aa, #6a1b9a);
+    color: white;
+    font-size: 1.2em;
+}
+
+/* Efek hover */
+.header:hover, .nav:hover, .sidebar-left:hover, .main-content:hover, .sidebar-right:hover, .footer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
